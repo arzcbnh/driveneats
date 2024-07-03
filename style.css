@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    font-family: "Roboto", sans-serif;
+
+    --aqua: #50d074;
+    --darkgray: #333;
+    --gray: #cbcbcb;
+    --green: #32b72f;
+    --lightgray: #eee;
+    --red: #cf2b2b;
+}
+
+.topBar {
+    padding: 1em;
+    background-color: var(--red);
+    box-shadow: var(--darkgray) 0 -5px 10px 5px;
+
+    color: white;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.topBar_title {
+    font-family: "Righteous", sans-serif;
+    font-size: 2.5em;
+}
+
+.store {
+    padding: 1em;
+    background-color: var(--lightgray);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.options_title {
+    margin-bottom: 10px;
+
+    font-family: "Righteous", sans-serif;
+    font-size: 2em;
+    color: var(--darkgray);
+}
+
+.options_list {
+    padding: 10px;
+    overflow-x: scroll;
+    
+    display: flex;
+    gap: 10px;
+}
+
+.card {
+    padding: 1em;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px -4px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5em;
+}
+
+.card.-selected {
+    position: relative;
+    box-shadow:
+        rgba(0, 0, 0, 0.25) 0 4px 4px,
+        var(--green) 0 0 0 5px inset;
+}
+
+.card.-selected::after {
+    display: block;
+    content: "";
+    width: 1em;
+    height: 1em;
+    background-image: url("assets/checkmark.png");
+    background-size: contain;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
+    
+.card_image {
+    width: 120px;
+    height: 72px;
+    border-radius: 1em;
+}
+
+.card_name {
+    font-weight: bold;
+    color: var(--darkgray)
+}
+
+.card_description {
+    font-size: 0.9em;
+    font-weight: lighter;
+    color: var(--darkgray); /* Não consigo ler com a cor do Figma */
+}
+
+.bottomBar {
+    padding: 1em;
+    background-color: white;
+
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.bottomBar_checkout {
+    width: 100%;
+    padding: 1em;
+    background-color: var(--green);
+    border: none;
+    border-radius: 9999px;
+
+    font-weight: bold;
+    color: white;
+}
+
+.bottomBar_checkout:disabled {
+    background-color: var(--gray);
+    font-weight: normal;
+}
+
+.checkout {
+    width: 90%;
+    background-color: var(--aqua);
+    border: none;
+    border-radius: 1em;
+
+    color: white;
+
+
+    flex-direction: column;
+    gap: 1em;
+}
+
+.checkout::backdrop {
+    background-color: #fffc;
+}
+
+.checkout_title {
+    font-weight: bold;
+    text-align: center;
+}
+
+.checkout_total {
+    font-weight: bold;
+}
+
+.checkout_price {
+    text-align: right;
+}
+
+.checkout_confirm {
+    padding: 0.7em;
+    background-color: white;
+    border: none;
+    border-radius: 9999px;
+
+    font-weight: bold;
+    color: var(--aqua);
+}
+
+.checkout_cancel {
+    background-color: transparent;
+    border: none;
+
+    font-weight: bold;
+    color: white;
+}

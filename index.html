@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivenEats</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="topBar">
+        <h1 class="topBar_title">DrivenEats</h1>
+        <div class="topBar_subtitle">Sua comida em 6 minutos</div>
+    </header>
+
+    <main class="store">
+        <section class="options">
+            <h2 class="options_title">Primeiro, seu prato</h2>
+            <div class="options_list">
+                <div class="card" onclick="selectCard(this)">
+                    <img src="assets/pf_carne.jpg" alt="Foto do prato" class="card_image">
+                    <h3 class="card_name">Completo</h3>
+                    <div class="card_description">Arroz, feijão, alface, tomate, ovo frito, bife, batata frita</div>
+                    <div class="card_price">R$ 17,90</div>
+                </div>
+                <div class="card" onclick="selectCard(this)">
+                    <img src="assets/pf_vegano.jpg" alt="Foto do prato" class="card_image">
+                    <h3 class="card_name">Vegano</h3>
+                    <div class="card_description">Arroz, agrião, abobrinha, cenoura, bife de soja</div>
+                    <div class="card_price">R$ 14,90</div>
+                </div>
+                <div class="card" onclick="selectCard(this)">
+                    <img src="assets/pf_frango.jpg" alt="Foto do prato" class="card_image">
+                    <h3 class="card_name">Frango Yin Yang</h3>
+                    <div class="card_description">Arroz, feijão, alface, tomate, frango grelhado, farofa</div>
+                    <div class="card_price">R$ 14,90</div>
+                </div>
+                <div class="card" onclick="selectCard(this)">
+                    <img src="assets/pf_calabresa.png" alt="Foto do prato" class="card_image">
+                    <h3 class="card_name">Macarronesa</h3>
+                    <div class="card_description">Arroz, feijão, macarrão com calabresa, aipim frito</div>
+                    <div class="card_price">R$ 12,90</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="options">
+            <h2 class="options_title">Agora, sua bebida</h2>
+            <div class="options_list">
+                <div class="card" onclick="selectCard(this)">
+                    <img src="assets/toddynho.png" alt="Toddynho" class="card_image">
+                    <h3 class="card_name">Toddynho</h3>
+                    <div class="card_description">Caixinha 200ml</div>
+                    <div class="card_price">R$ 3,90</div>
+                </div>
+                <div class="card" onclick="selectCard(this)">
+                    <img src="assets/coca.png" alt="Lata de coca-cola" class="card_image">
+                    <h3 class="card_name">Coca-cola</h3>
+                    <div class="card_description">Lata 350ml</div>
+                    <div class="card_price">R$ 4,90</div>
+                </div>
+                <div class="card" onclick="selectCard(this)">
+                    <img src="assets/suco.png" alt="Suco de laranja" class="card_image">
+                    <h3 class="card_name">Suco de laranja</h3>
+                    <div class="card_description">Laranja</div>
+                    <div class="card_price">R$ 5,90</div>
+                </div>
+                <div class="card" onclick="selectCard(this)">
+                    <img src="assets/fanta.png" alt="Lata de fanta" class="card_image">
+                    <h3 class="card_name">Fanta Laranja</h3>
+                    <div class="card_description">Lata 350ml</div>
+                    <div class="card_price">R$ 3,90</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="options">
+            <h2 class="options_title">Por fim, sua sobremesa</h2>
+            <div class="options_list">
+                <div class="card" onclick="selectCard(this)">
+                    <img src="assets/bolas.jpg" alt="Bolas de futebol de chocolate" class="card_image">
+                    <h3 class="card_name">Três bolas de futebol</h3>
+                    <div class="card_description">Chocolate e parafina</div>
+                    <div class="card_price">R$ 1,90</div>
+                </div>
+                <div class="card" onclick="selectCard(this)">
+                    <img src="assets/brownie.jpg" alt="Brownie" class="card_image">
+                    <h3 class="card_name">Brownie de chocolate</h3>
+                    <div class="card_description">Farinha, ovo, chocolate</div>
+                    <div class="card_price">R$ 3,90</div>
+                </div>
+                <div class="card" onclick="selectCard(this)">
+                    <img src="assets/pudim.jpg" alt="Pudim" class="card_image">
+                    <h3 class="card_name">Pudim</h3>
+                    <div class="card_description">Leite condensado e ovo</div>
+                    <div class="card_price">R$ 7,90</div>
+                </div>
+                <div class="card" onclick="selectCard(this)">
+                    <img src="assets/mousse.jpg" alt="Mousse" class="card_image">
+                    <h3 class="card_name">Mousse</h3>
+                    <div class="card_description">Maracujá e ovo</div>
+                    <div class="card_price">R$ 7,90</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="bottomBar">
+        <button class="bottomBar_checkout" onclick="openCheckout()" disabled></button>
+    </div>
+
+    <dialog class="checkout">
+        <h2 class="checkout_title">Confirme seu pedido</h2>
+        <table class="checkout_list">
+            <tr class="checkout_item">
+                <td class="checkout_name"></td>
+                <td class="checkout_price"></td>
+            </tr>
+            <tr class="checkout_item">
+                <td class="checkout_name"></td>
+                <td class="checkout_price"></td>
+            </tr>
+            <tr class="checkout_item">
+                <td class="checkout_name"></td>
+                <td class="checkout_price"></td>
+            </tr>
+            <tr class="checkout_total">
+                <td class="checkout_name">TOTAL</td>
+                <td class="checkout_price"></td>
+            </tr>
+        </table>
+
+        <button class="checkout_confirm" onclick="launchWhatsApp()">Tudo certo, pode pedir!</button>
+        <button class="checkout_cancel" onclick="closeCheckout()" autofocus>Cancelar</button>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
