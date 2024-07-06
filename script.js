@@ -35,7 +35,7 @@ function updateCheckoutButton() {
 
 function launchWhatsApp() {
     const itemNameElements = dialog.querySelectorAll(".checkout_item > .checkout_name");
-    const totalPriceElement = dialog.querySelectorAll(".checkout_total > .checkout_price");
+    const totalPriceElement = dialog.querySelector(".checkout_total > .checkout_price");
     const message = [
         `Olá, gostaria de fazer o pedido:`,
         `- Prato: ${itemNameElements.item(0).textContent}`,
